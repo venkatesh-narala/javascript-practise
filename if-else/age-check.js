@@ -1,4 +1,3 @@
-
 y=prompt("Enter your age:")
 
 if (y>=18){
@@ -7,3 +6,4 @@ if (y>=18){
 else{
     document.write(" not eligible for vote")
 }
+
