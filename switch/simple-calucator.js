@@ -1,5 +1,5 @@
-function simplecalucator(num1, num2, opreator) {
-	switch (opreator) {
+function simplecalucator(num1, num2, operator) {
+	switch (operator) {
 		case "+":
 			return num1 + num2;
 		case "-":
@@ -7,12 +7,15 @@ function simplecalucator(num1, num2, opreator) {
 		case "*":
 			return num1 * num2;
 		case "/":
-			return num1 / num2;
+			return  num2 !==0 ? num1 / num2: "cannot divide by zero";
 		default:
-			return num2 !== 0 ? num1 / num2 : "Cannot divide by zero";
+			return "Invalid operator";
 	}
 }
-document.write(simplecalucator(2, 7, "+"));
-document.write(simplecalucator(12, 15, "-"));
-document.write(simplecalucator(2, 7, "*"));
-simplecalucator(opreator);
+let num1 = parseFloat(prompt("Enter the 1st number :"));
+let num2 = parseFloat(prompt("Enter the 2st number :"));
+let operator = prompt("Enter the operator(+,-,*,/):");
+
+let calucateresult = simplecalucator(num1, num2, operator);
+
+document.write(`<p>${num1}${operator}${num2}=${calucateresult}</p>`);

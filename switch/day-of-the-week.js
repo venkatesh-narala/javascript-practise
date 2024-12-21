@@ -27,6 +27,7 @@ function getDayOfWeek(daynumber) {
 			break;
 		default:
 			dayname = "invalid day number.please enter a between number 1 to 7";
+			break;
 	}
 	document.write("<p1> Day " + daynumber + ":" + dayname + "</p1>");
 }
